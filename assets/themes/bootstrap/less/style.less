@@ -1,21 +1,17 @@
 // Core variables and mixins
 @import "variables.less";
 @import "mixins.less";
-
 // Reset
 @import "normalize.less";
 @import "print.less";
-
 // Core CSS
 @import "scaffolding.less";
 @import "type.less";
 @import "code.less";
 @import "grid.less";
-
 @import "tables.less";
 @import "forms.less";
 @import "buttons.less";
-
 // Components: common
 @import "component-animations.less";
 @import "input-groups.less";
@@ -24,7 +20,6 @@
 @import "panels.less";
 @import "wells.less";
 @import "close.less";
-
 // Components: Nav
 @import "navs.less";
 @import "navbar.less";
@@ -32,12 +27,10 @@
 // @import "breadcrumbs.less";
 @import "pagination.less";
 @import "pager.less";
-
 // Components: Popovers
 // @import "modals.less";
 // @import "tooltip.less";
 // @import "popovers.less";
-
 // Components: Misc
 // @import "alerts.less";
 @import "thumbnails.less";
@@ -48,11 +41,10 @@
 // @import "accordion.less";
 // @import "carousel.less";
 // @import "jumbotron.less";
-
 // Utility classes
-@import "utilities.less"; // Has to be last to override when necessary
+@import "utilities.less";
+// Has to be last to override when necessary
 @import "responsive-utilities.less";
-
 @import "../font-awesome/less/font-awesome.less";
 
 @font-size-base: 15px;
@@ -61,12 +53,14 @@
 body {
   padding-top: 50px;
 }
-h1,h2,h3,h4,h5,h6 {
+
+h1, h2, h3, h4, h5, h6 {
   font-weight: 100;
   text-transform: uppercase;
   margin-top: 20px;
 }
-h2,h3,h4,h5,h6 {
+
+h2, h3, h4, h5, h6 {
   border-top: 1px solid #f5f5f5;
   border-bottom: 1px solid #f5f5f5;
   padding: 5px;
@@ -134,7 +128,6 @@ article,
   }
 }
 
-
 ul.listing {
   margin: 0 0 25px 0;
   padding: 0;
@@ -157,6 +150,7 @@ ul.listing {
   font-weight: 100;
   text-transform: uppercase;
 }
+
 #footer {
   margin-top: 50px;
   border-top: 1px solid #f5f5f5;
@@ -184,5 +178,49 @@ ul.listing {
 @media (max-width: 767px) {
   #footer .col-span-2.next {
     margin-top: 30px;
+  }
+}
+
+ul.tag_box {
+
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+
+  li {
+    line-height: 28px;
+
+    i {
+      opacity: 0.9;
+    }
+  }
+
+  &.inline li {
+    float: left;
+  }
+
+  a {
+    padding: 3px 6px;
+    margin: 2px;
+    background: #eee;
+    color: #555;
+    border-radius: 3px;
+    text-decoration: none;
+    border: 1px dashed #cccccc;
+
+    span {
+      vertical-align: super;
+      font-size: 0.8em;
+    }
+
+    &:hover {
+      background-color: #e5e5e5;
+    }
+
+    &.active {
+      background: #57A957;
+      border: 1px solid #4c964d;
+      color: #FFF;
+    }
   }
 }
