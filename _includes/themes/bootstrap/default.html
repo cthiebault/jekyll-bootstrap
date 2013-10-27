@@ -25,10 +25,8 @@
   <link rel="apple-touch-icon" href="images/favicon.png">
 
   <!-- atom & rss feed -->
-  <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate"
-        title="Sitewide ATOM Feed">
-  <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate"
-        title="Sitewide RSS Feed">
+  <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="ATOM Feed">
+  <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="RSS Feed">
 
 </head>
 
@@ -46,40 +44,13 @@
   </div>
 
   <div class="collapse navbar-collapse navbar-pages">
-    <ul class="nav navbar-nav navbar-right hidden-print thin">
-      <li>
-        <a class="hidden-xs" href="http://github.com/caarlos0/up" title="Get this theme!">
-          <i class="icon-download icon-large"></i>
-        </a>
-        <a class="visible-xs" href="http://github.com/caarlos0/up" title="Get this theme!">
-          <i class="icon-download icon-large"></i> Get this theme!
-        </a>
-      </li>
-      <li>
-        <a class="hidden-xs" title="A propos de moi" href="/about"> <i class="icon-user icon-large"></i> </a>
-        <a class="visible-xs" title="A propos de moi" href="/about"> <i class="icon-user icon-large"></i> A propos de moi</a>
-      </li>
-      <li>
-        <a class="hidden-xs" href="/atom.xml" title="Atom Feed"> <i class="icon-rss icon-large"></i> </a>
-        <a class="visible-xs" href="/atom.xml" title="Atom Feed"> <i class="icon-rss icon-large"></i> Atom Feed </a>
-      </li>
+    <ul class="nav navbar-nav navbar-right hidden-print lowercase thin">
+      <li><a title="Atom Feed" href="/archive.html">Archive</a></li>
+      <li><a title="Atom Feed" href="/tags.html">Tags</a></li>
+      <li><a title="About me" href="/about.html">A propos de moi</a></li>
     </ul>
   </div>
 </nav>
-
-
-<!--<div class="navbar">-->
-  <!--<div class="navbar-inner">-->
-    <!--<div class="container-narrow">-->
-      <!--<a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>-->
-      <!--<ul class="nav">-->
-        <!--{% assign pages_list = site.pages %}-->
-        <!--{% assign group = 'navigation' %}-->
-        <!--{% include JB/pages_list %}-->
-      <!--</ul>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</div>-->
 
 <div class="container">
 
@@ -89,7 +60,10 @@
 
   <footer>
     <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}</p>
-    <p><a href="https://github.com/cthiebault"> <i class="icon icon-github icon-4x"></i> <div>Mon profil GitHub</div> </a></p>
+
+    <p><a href="https://github.com/cthiebault"> <i class="icon icon-github icon-4x"></i>
+      <div>Mon profil GitHub</div>
+    </a></p>
   </footer>
 
 </div>
