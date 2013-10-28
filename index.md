@@ -5,6 +5,8 @@ tagline:
 ---
 {% include JB/setup %}
 
+<p class="lead">Petit blog sans prétention pour partager mes expériences en Java...<br/>Bonne lecture!</p>
+
 <section class="content">
 <ul class="listing">
 {% for post in site.posts %}
