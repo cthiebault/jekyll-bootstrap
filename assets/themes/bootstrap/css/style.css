@@ -5731,6 +5731,15 @@ ul.tag_box a.active {
   border: 1px solid #4c964d;
   color: #FFF;
 }
+.tag-side-box h4 {
+  margin-top: 10px;
+}
+.tag-side-box ul.tag_box {
+  margin-left: -30px;
+}
+.tag-side-box ul.tag_box a {
+  background: #ffffff;
+}
 .vertical-middle {
   vertical-align: middle;
 }
