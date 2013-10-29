@@ -12,6 +12,8 @@ En ce temps d'Halloween, je réveille les morts-vivants et migre mon blog de [Bl
 
 Je profite de ce billet pour lister rapidement les outils utilisés pour la migration du blog.
 
+<!-- more -->
+
 ## GitHub pages
 
 ### Installation en local

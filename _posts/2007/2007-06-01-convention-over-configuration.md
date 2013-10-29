@@ -11,6 +11,8 @@ Convention plutôt que configuration en bon français : il est inutile de préci
 
 Le but de ce post est de réduire un peu la taille des fichiers de configuration de Spring qui peuvent vite devenir trés gros...
 
+<!-- more -->
+
 ## Autowire des controlleurs
 
 Pour commencer on peut utiliser le autowiring lors de la définition de nos beans. Spring va effectuer les résolutions automatiquement soit par type, soit par nom.

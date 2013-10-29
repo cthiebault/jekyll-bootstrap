@@ -11,6 +11,8 @@ MyEclipse ne supporte pas officiellement Maven2 mais en utilisant le plugin m2ec
 
 Selon le standard définit par Maven les classes devraient être compilées dans le répertoire target, mais si l'on veut utiliser MyEclipse pour déployer l'application (Hot deployment) il faut que nous compilions les classes vers `src/main/webapp/WEB-INF/classes`. L'idéal serait que MyEclipse supporte le déploiement des classes compilées dans différents répertoires vers le serveur comme ça nous pourrions suivre le standard Maven et compiler vers target mais ce n'est pas encore le cas...
 
+<!-- more -->
+
 Attention : lorsque l'on déploit avec MyEclipse, on perd la fonctionnalité des filtres de Maven :-(
 
 Dans les propriétés du projet web, définir le webrootdir à `src/main/webapp` et configurer le fichier `.classpath` comme suit :

@@ -16,6 +16,8 @@ Dans le billet d'aujourd'hui, je présenterais comment afficher une liste de che
 Je n'utilise pas de radio car je veux pouvoir désélectionner tous les checkbox (ie la valeur nulle est permise).
 En fait c'est exactement le fonctionnement d'une liste de radio (un seul choix possible) mais je peux tout désélectionner, ce qui n'est pas possible avec les radios.
 
+<!-- more -->
+
 ```html
 <input type="checkbox" id="ie" /><label for="ie">Internet Explorer</label>
 ```

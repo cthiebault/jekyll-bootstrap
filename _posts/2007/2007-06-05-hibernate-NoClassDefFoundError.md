@@ -13,6 +13,8 @@ En mettant à jour Hibernate Annotations à la dernière version (3.3.0.ga) via 
 NoClassDefFoundError: org/hibernate/annotations/common/reflection/ReflectionManager
 ```
 
+<!-- more -->
+
 C'est que le POM de Hibernate Annotations est incomplet.... Il manque la dépendance à hibernate-commons-annotations.
 Donc en attendant que le POM de Hibernate Annotations soit corrigé ([http://jira.codehaus.org/browse/MAVENUPLOAD-1532]()), ajoutez dans le POM de votre projet la dépendance à hibernate-commons-annotations 3.3.0.ga.
 

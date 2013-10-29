@@ -9,6 +9,8 @@ tags: [maven]
 
 Voici quelques petits trucs pratique pour alléger les POM de Maven2 dans les projets multi-modules...
 
+<!-- more -->
+
 Classiquement chaque POM défini ses dépendances comme suit :
 
 **pom.xml**

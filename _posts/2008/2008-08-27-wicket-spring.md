@@ -10,6 +10,8 @@ tags: [wicket, spring]
 Depuis le temps que j'entends parler de Wicket, je me lance enfin dans l'aventure :-)
 J'essayerais ici de décrire les différentes étapes de la migration d'une application [Spring MVC 2.5](http://springframework.org) / [Weblow 2.0](http://springframework.org/webflow) / [Hibernate](http://www.hibernate.org) vers [Wicket 1.3.4](http://wicket.apache.org).
 
+<!-- more -->
+
 Pour démarrer, je suis parti des articles du [blog Xebia France](http://blog.xebia.fr) qui sont vraiment bien fait... Merci à eux!
 
 * [Hands on Wicket 1 : Quickstart & config](http://blog.xebia.fr/2008/02/14/hands-on-wicket-partie-1)

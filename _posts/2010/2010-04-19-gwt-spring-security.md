@@ -14,9 +14,10 @@ L'application est developpée avec les outils suivants :
 * [GWT 2.0](http://code.google.com/webtoolkit)
 * [SmartGWT 2.0](http://code.google.com/p/smartgwt)
 * [Spring](http://www.springsource.org/about) et [Spring Security 3.0](http://static.springsource.org/spring-security/site)
-* [Gilead 1.3](http://noon.gilead.free.fr/gilead/)
-* [GWT-SL 1.0](http://gwt-widget.sourceforge.net/)
+* [Gilead 1.3](http://noon.gilead.free.fr/gilead)
+* [GWT-SL 1.0](http://gwt-widget.sourceforge.net)
 
+<!-- more -->
 
 Le projet [GWT-ent](http://code.google.com/p/gwt-ent) propose une intégration avec Spring Security mais seulement avec la version 2.5 et la qualité du code laisse à désirer...
 De plus, avec les dernières versions de Spring Security la configuration a été grandement simplifiée!

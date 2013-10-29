@@ -7,7 +7,6 @@ tags: []
 ---
 {% include JB/setup %}
 
-
 Quelques petits liens pour coder Java sur un air de Java ;-)
 
 * [Java - Sexe, accordéon et alcool](http://www.radioblogclub.com/open/138797/JAVA%20-%20Sexe%20accordeon%20et%20alcool)
