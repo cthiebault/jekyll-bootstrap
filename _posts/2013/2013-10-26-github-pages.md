@@ -7,7 +7,7 @@ tags: [github]
 ---
 {% include JB/setup %}
 
-En ce temps d'Halloween, je réveille les morts-vivants et migre mon blog de [Blogger](http://surunairdejava.blogspot.ca) vers [GitHub](http://cthiebault.github.io).
+En ce temps d'Halloween, je réveille les morts-vivants et migre mon blog de [Blogger](http://surunairdejava.blogspot.ca) vers [GitHub Pages](http://pages.github.com).
 Ça fait un moment que je me dis que je posterais pus facilement si je pouvais écrire mes billets en [Markdown](http://daringfireball.net/projects/markdown) plutôt qu'en HTML. On verra bien...
 
 Je profite de ce billet pour lister rapidement les outils utilisés pour la migration du blog.
@@ -74,4 +74,4 @@ Globalement la migration s'est plutôt bien faite. Le look est très basique mai
 Le markdown simplifie pas mal l’écriture des billets, on verra si je serais plus présent ;-)
 
 Pour rappel, vous pouvez voir les sources de ce blog sur le repository GitHub
-[https://github.com/cthiebault/cthiebault.github.com]()
+[https://github.com/cthiebault/cthiebault.github.com](https://github.com/cthiebault/cthiebault.github.com)
