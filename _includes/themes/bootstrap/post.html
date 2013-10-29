@@ -16,19 +16,21 @@
 
   <hr>
 
-  <ul class="pagination">
-    {% if page.previous %}
-    <li><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Précédent</a></li>
-    {% else %}
-    <li class="disabled"><a href="#">&laquo; Précédent</a></li>
-    {% endif %}
-    <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
-    {% if page.next %}
-    <li><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Suivant &raquo;</a></li>
-    {% else %}
-    <li class="disabled"><a href="#">Suivant &raquo;</a></li>
-    {% endif %}
-  </ul>
+  <div class="text-center">
+    <ul class="pagination">
+      {% if page.previous %}
+      <li><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Précédent</a></li>
+      {% else %}
+      <li class="disabled"><a href="#">&laquo; Précédent</a></li>
+      {% endif %}
+      <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
+      {% if page.next %}
+      <li><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Suivant &raquo;</a></li>
+      {% else %}
+      <li class="disabled"><a href="#">Suivant &raquo;</a></li>
+      {% endif %}
+    </ul>
+  </div>
 
   <hr>
 
