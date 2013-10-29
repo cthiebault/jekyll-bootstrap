@@ -7,8 +7,8 @@ tags: [github]
 ---
 {% include JB/setup %}
 
-En ce temps d'Halloween, je réveille les morts-vivants et migre mon blog de [Blogger](http://surunairdejava.blogspot.ca/) vers [GitHub](http://cthiebault.github.io/).
-Ça fait un moment que je me dis que je posterais pus facilement si je pouvais écrire mes billets en [Markdown](http://daringfireball.net/projects/markdown/) plutôt qu'en HTML. On verra bien...
+En ce temps d'Halloween, je réveille les morts-vivants et migre mon blog de [Blogger](http://surunairdejava.blogspot.ca) vers [GitHub](http://cthiebault.github.io).
+Ça fait un moment que je me dis que je posterais pus facilement si je pouvais écrire mes billets en [Markdown](http://daringfireball.net/projects/markdown) plutôt qu'en HTML. On verra bien...
 
 Je profite de ce billet pour lister rapidement les outils utilisés pour la migration du blog.
 
@@ -19,19 +19,22 @@ Je profite de ce billet pour lister rapidement les outils utilisés pour la migr
 ### Installation en local
 
 [GitHub Pages Ruby Gem](https://github.com/github/pages-gem)
-A simple Ruby Gem to bootstrap dependencies for setting up and maintaining a local Jekyll environment in sync with GitHub Pages
+Pratique pour rouler vos pages en local avec la même config que GitHub.
 
 ### Configuration
 
 #### Thème
 
-[http://jekyllbootstrap.com]()
-Jekyll-Bootstrap is a full blog scaffold for Jekyll based blogs
+Je me suis basé sur [jekyllbootstrap](http://jekyllbootstrap.com) pour avoir un site simple basé sur [Bootstrap](http://getbootstrap.com). Par contre j'ai du mettre à jour Bootstrap qui était encore en version 2.
 
 #### Markdown
+
+L'idée est de pouvoir écrire les billets en Markdown (à la saveur GitHub) :
 [Mimicking GitHub Flavored Markdown](http://jekyllrb.com/docs/github-pages)
 
 #### Syntax highlighting
+
+Voici ma config pour la coloration des blocs de code :
 
 **_config.yml**
 
@@ -49,8 +52,8 @@ redcarpet:
     - fenced_code_blocks
 ```
 
-Et télécharger le CSS pour colorer les blocs de code :
-[https://github.com/mojombo/tpw/blob/master/css/syntax.css]()
+Et télécharger le CSS qui va bien :
+[https://github.com/mojombo/tpw/blob/master/css/syntax.css](https://github.com/mojombo/tpw/blob/master/css/syntax.css)
 
 **_includes/themes/bootstrap/default.html**
 
@@ -61,7 +64,14 @@ Et télécharger le CSS pour colorer les blocs de code :
 </head>
 ```
 
+### Commentaires
+
+L'importation des commentaires de Blogger vers [Disqus](http://disqus.com) s'est faite en douceur... Mais il n'y en avait vraiment pas beaucoup ;-)
+
 ## Conclusion
+
+Globalement la migration s'est plutôt bien faite. Le look est très basique mais toujours mieux que le template par défaut de Blogger...
+Le markdown simplifie pas mal l’écriture des billets, on verra si je serais plus présent ;-)
 
 Pour rappel, vous pouvez voir les sources de ce blog sur le repository GitHub
 [https://github.com/cthiebault/cthiebault.github.com]()

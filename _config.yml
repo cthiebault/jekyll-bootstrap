@@ -18,9 +18,6 @@ redcarpet:
 # Publish future articles?
 future: false
 
-# Language
-lang: fr
-
 # number of posts per page
 paginate: 5
 
