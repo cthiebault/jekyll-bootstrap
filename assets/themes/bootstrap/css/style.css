@@ -5726,3 +5726,9 @@ ul.tag_box a.active {
   border: 1px solid #4c964d;
   color: #FFF;
 }
+.vertical-middle {
+  vertical-align: middle;
+}
+.centered {
+  text-align: center;
+}
