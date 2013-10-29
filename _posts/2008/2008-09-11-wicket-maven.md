@@ -10,6 +10,8 @@ tags: [wicket, maven]
 Si vous utilisez Maven pour packager votre appplication Wicket, n'oubliez pas de modifier le POM.xml pour inclure les fichiers html, css, js, etc. dans votre war (ou jar).
 A moins que vous placiez tous ces fichiers non-java sous `src/main/resources` au lieu de `src/main/java` (ça fait quand même bizarre de voir tous ces fichiers non-java à coté des classes).
 
+<!-- more -->
+
 ```xml
 <build>
  <resources>

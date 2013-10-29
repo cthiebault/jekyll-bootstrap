@@ -5579,7 +5579,6 @@ article,
 .content {
   height: 100%;
   min-height: 100%;
-  padding: 10px;
 }
 article img,
 .content img {
@@ -5642,6 +5641,9 @@ article div.pull,
 .content div.pull {
   padding-top: 20px;
 }
+article.preview h1 {
+  font-size: 1.7em;
+}
 ul.listing {
   margin: 0 0 25px 0;
   padding: 0;
@@ -5685,6 +5687,9 @@ ul.listing li span {
 #footer i.icon {
   display: block;
   margin: auto;
+}
+footer {
+  margin-bottom: 20px;
 }
 @media (max-width: 767px) {
   #footer .col-span-2.next {
