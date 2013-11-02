@@ -2,6 +2,7 @@
 layout: page
 title: Sur un air de Java
 tagline:
+description: Petit blog sans prétention pour partager mes expériences en Java.
 ---
 {% include JB/setup %}
 
@@ -18,7 +19,9 @@ tagline:
 
       <article class="preview">
         <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-        <section class="byline">{{ post.date | date: "%B %e, %Y" }}</section>
+        <section class="byline">
+          <time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%d/%m/%Y" }}</time>
+        </section>
         <div class="summary">
           {% if post.content contains "<!-- more -->" %}
           {{ post.content | split:"<!-- more -->" | first % }}

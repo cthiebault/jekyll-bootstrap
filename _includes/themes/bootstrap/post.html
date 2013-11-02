@@ -2,7 +2,9 @@
 
   <h1 class="page-header">{{ page.title }}</h1>
 
-  <section class="byline">{{ page.date | date: "%B %e, %Y" }}</section>
+  <section class="byline">
+    <time datetime='{{ page.date | date: "%Y-%m-%d" }}'>{{ page.date | date: "%d/%m/%Y" }}</time>
+  </section>
 
   {{ content }}
 
