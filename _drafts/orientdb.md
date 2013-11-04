@@ -82,7 +82,7 @@ Dans un premier temps j'ai choisi d'utiliser cette méthode car ca m'évitait de
 
 Un peu de code maintenant :
 
-### Entity
+### Entités
 
 ```java
 public abstract class AbstractOrientDbEntity {
@@ -110,15 +110,14 @@ public abstract class AbstractOrientDbEntity {
 
 ### Enregistrer une classe à persister
 
+Cette étape permet à OrientDB de définir le schema de la table correspondante à cette entité.
+
 ```java
 public void registerEntityClass(Class<? extends AbstractOrientDbEntity>... classes) {
-  OObjectDatabaseTx db = serverFactory.getObjectTx();
-  try {
+  try(OObjectDatabaseTx db = serverFactory.getObjectTx()) {
     for(Class<?> clazz : classes) {
       db.getEntityManager().registerEntityClass(clazz);
     }
-  } finally {
-    db.close();
   }
 }
 ```
@@ -126,7 +125,7 @@ public void registerEntityClass(Class<? extends AbstractOrientDbEntity>... class
 OrientDB supporte les relations entre entités : pour chaque type d'object OrientDB crée une table correspondante.
 Par contre il n'y a pas la notion de [@Embedded](http://docs.jboss.org/hibernate/annotations/3.5/reference/en/html_single/#d0e714).
 
-Théoriquement, OrientDB supporte aussi la [suppression en cascade](https://github.com/orientechnologies/orientdb/wiki/Object-Database#cascade-deleting) mais on a rencontré quelque problèmes avec ça :(
+Théoriquement, OrientDB supporte aussi la [suppression en cascade](https://github.com/orientechnologies/orientdb/wiki/Object-Database#cascade-deleting) mais on a rencontré quelque problèmes avec ça.
 
 ### Créer un index
 
@@ -168,7 +167,7 @@ public <TEntity extends AbstractOrientDbEntity> void save(TEntity entity) {
 
 ### Accéder aux objects
 
-Notez ici que je détache mes objets, c'est à dire que mes objets ne sont pas des proxy mais de vrai Pojo avec tous les champs chargés... on commence à retrouver le monde merveilleux des objets transient/detached de Hibernate...
+Notez ici que je détache mes objets, c'est à dire que mes objets ne sont plus des proxy mais de vrai Pojo avec tous les champs chargés. On commence à retrouver le monde merveilleux des objets transient/detached de Hibernate...
 
 ```java
 public <TEntity extends AbstractOrientDbEntity> Iterable<TEntity> list(Class<TEntity> clazz) {
@@ -228,12 +227,144 @@ public interface OrientDbTransactionCallback<T> {
 
 En pratique la base de données orientée Objet de OrientDB fonctionne trés bien! Ca ressemble vraiment beaucoup au monde de Hibernate (en plus simple!).
 
-Mais dans mon cas, le problème vient du fait que justement, ça ressemble trop à Hibernate et qu'on se retrouve à nouveau à gérer des problèmes d'objets attachés/détachés, des problèmes de cascade, etc. De plus, je travaille avec des DTO que je dois transformer en entités OrientDB et là c'est un bonheur avec de grandes hiérarchies :-(
+Mais dans mon cas, le problème vient du fait que justement, ça ressemble trop à Hibernate et qu'on se retrouve à nouveau à gérer des problèmes d'objets attachés/détachés, des problèmes de cascade, etc. De plus, je travaille avec des DTO que je dois transformer en entités OrientDB et là c'est un bonheur avec de grandes hiérarchies. Surtout que mes DTO ne contiennent pas les @Id de OrientDB :-(
 
 Bref, pour toutes ces raisons j'ai basculé vers la base de données orientée Document...
 
 
 ## Base de données orientée Document
 
+Comme expliqué précédemment, je n'avais pas choisi cette configuration de OrientDB pour éviter de faire le mapping à la main entre les entités et les documents.
+Mais OrientDB propose de populer les documents depuis du JSON... sauvé! :-)
 
+J'utilise [Gson](http://code.google.com/p/google-gson) pour serialiser/deserialiser le JSON.
 
+### Entités
+
+Ici nous n'avons pas besoin d'enregistrer les classes à persister puisque nous somme en mode Document et donc 'schema-less'.
+
+Dans mon cas, afin d'identifier de façon unique mes objets pour les mettre à jour, mes entités implementent `HasUniqueProperties`.
+
+```java
+public interface HasUniqueProperties {
+  List<String> getUniqueProperties();
+  List<Object> getUniqueValues();
+}
+```
+
+Par exemple, pour les `User` :
+
+```java
+public class User implements HasUniqueProperties {
+
+  @Nonnull
+  private String username;
+  [...]
+
+  @Override
+  public List<String> getUniqueProperties() {
+    return Lists.newArrayList("username");
+  }
+
+  @Override
+  public List<Object> getUniqueValues() {
+    return Lists.<Object>newArrayList(username);
+  }
+}
+```
+
+### Créer un index unique
+
+J'utilise cette méthode pour créer un index unique sur tous les champs qui définissent l'unicité de mon entité.
+Par exemple pour le `username` d'un `User`, le nom de l'index sera `User.username`.
+
+```java
+public void createUniqueIndex(Class<? extends HasUniqueProperties> clazz) {
+  try(ODatabaseDocumentTx db = serverFactory.getDocumentTx()) {
+    String className = clazz.getSimpleName();
+
+    OClass indexClass;
+    OSchema schema = db.getMetadata().getSchema();
+    if(schema.existsClass(className)) {
+      indexClass = schema.getClass(className);
+    } else {
+      indexClass = schema.createClass(className);
+      schema.save();
+    }
+
+    StringBuilder indexName = new StringBuilder(clazz.getSimpleName());
+    HasUniqueProperties bean = BeanUtils.instantiate(clazz);
+    List<String> uniqueProperties = bean.getUniqueProperties();
+    for(String propertyPath : uniqueProperties) {
+      indexName.append(".").append(propertyPath);
+      OProperty property = indexClass.getProperty(propertyPath);
+      if(property == null) {
+        PropertyDescriptor propertyDescriptor = BeanUtils.getPropertyDescriptor(clazz, propertyPath);
+        indexClass.createProperty(propertyPath, OType.getTypeByClass(propertyDescriptor.getPropertyType()));
+        schema.save();
+      }
+    }
+
+    indexClass.createIndex(indexName.toString(), OClass.INDEX_TYPE.UNIQUE,
+        uniqueProperties.toArray(new String[uniqueProperties.size()]));
+  }
+}
+```
+
+### Persister un object
+
+```java
+
+// need to configure Gson date format to follow OrientDB format
+private final Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
+
+public void save(HasUniqueProperties template, HasUniqueProperties entity) {
+
+  ODatabaseDocumentTx db = serverFactory.getDocumentTx();
+  try {
+
+    // use the index to search for document that match our template
+    ODocument document = findUniqueDocument(db, template);
+    if(document == null) {
+      document = new ODocument(entity.getClass().getSimpleName());
+      document.fromJSON(gson.toJson(entity));
+    } else {
+      document.fromJSON(gson.toJson(entity));
+    }
+
+    db.begin(OTransaction.TXTYPE.OPTIMISTIC);
+    document.save();
+    db.commit();
+
+  } catch(OException e) {
+    db.rollback();
+    throw e;
+  } finally {
+    db.close();
+  }
+}
+
+private ODocument findUniqueDocument(ODatabaseDocumentTx db, HasUniqueProperties template) {
+
+  StringBuilder indexName = new StringBuilder(template.getClass().getSimpleName());
+  for(String prop : template.getUniqueProperties()) {
+    indexName.append(".").append(prop);
+  }
+  OIndex<?> index = db.getMetadata().getIndexManager().getIndex(indexName.toString());
+
+  Object key = template.getUniqueValues().size() == 1
+      ? template.getUniqueValues().get(0)
+      : new OCompositeKey(template.getUniqueValues());
+
+  OIdentifiable identifiable = (OIdentifiable) index.get(key);
+  return identifiable == null ? null : identifiable.<ODocument>getRecord();
+}
+```
+
+### Accéder aux objects
+
+### Requêtes SQL
+
+### Transaction template
+
+### Conclusion
