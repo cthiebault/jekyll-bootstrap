@@ -23,28 +23,16 @@ public class OrientDbServerFactory {
 
   private static final Logger log = LoggerFactory.getLogger(OrientDbServerFactory.class);
 
+  @Value("${orientdb.url}")
   private String url;
 
+  @Value("${orientdb.username}")
   private String username;
 
+  @Value("${orientdb.password}")
   private String password;
 
   private OServer server;
-
-  @Value("${orientdb.url}")
-  public void setUrl(@Nonnull String url) {
-    this.url = url;
-  }
-
-  @Value("${orientdb.username}")
-  public void setUsername(String username) {
-    this.username = username;
-  }
-
-  @Value("${orientdb.password}")
-  public void setPassword(String password) {
-    this.password = password;
-  }
 
   @PostConstruct
   public void start() throws Exception {
@@ -65,21 +53,17 @@ public class OrientDbServerFactory {
     if(server != null) server.shutdown();
   }
 
-  @Nonnull
   public OServer getServer() {
     return server;
   }
 
-  @Nonnull
   public OObjectDatabaseTx getObjectTx() {
     return OObjectDatabasePool.global().acquire(url, username, password);
   }
 
-  @Nonnull
   public ODatabaseDocumentTx getDocumentTx() {
     return ODatabaseDocumentPool.global().acquire(url, username, password);
   }
-
 }
 
 ```
@@ -108,7 +92,6 @@ public abstract class AbstractOrientDbEntity {
 
   @Version
   private Integer version;
-
   [...]
 
   @Override
@@ -139,6 +122,11 @@ public void registerEntityClass(Class<? extends AbstractOrientDbEntity>... class
   }
 }
 ```
+
+OrientDB supporte les relations entre entités : pour chaque type d'object OrientDB crée une table correspondante.
+Par contre il n'y a pas la notion de [@Embedded](http://docs.jboss.org/hibernate/annotations/3.5/reference/en/html_single/#d0e714).
+
+Théoriquement, OrientDB supporte aussi la [suppression en cascade](https://github.com/orientechnologies/orientdb/wiki/Object-Database#cascade-deleting) mais on a rencontré quelque problèmes avec ça :(
 
 ### Créer un index
 
@@ -213,7 +201,7 @@ public <TEntity extends AbstractOrientDbEntity> Iterable<TEntity> list(String sq
 
 ### Transaction template
 
-Pour finir voici une methode à la [TransactionTemplate](http://docs.spring.io/spring/docs/3.0.x/api/org/springframework/transaction/support/TransactionTemplate.html) de Spring qui assure que la connection sera bien fermée en fin de traitement :
+Pour finir voici une méthode à la [TransactionTemplate](http://docs.spring.io/spring/docs/3.0.x/api/org/springframework/transaction/support/TransactionTemplate.html) de Spring qui assure que la connection sera bien fermée en fin de traitement :
 
 ```java
 public <T> T execute(OrientDbTransactionCallback<T> action) {
@@ -240,4 +228,12 @@ public interface OrientDbTransactionCallback<T> {
 
 En pratique la base de données orientée Objet de OrientDB fonctionne trés bien! Ca ressemble vraiment beaucoup au monde de Hibernate (en plus simple!).
 
+Mais dans mon cas, le problème vient du fait que justement, ça ressemble trop à Hibernate et qu'on se retrouve à nouveau à gérer des problèmes d'objets attachés/détachés, des problèmes de cascade, etc. De plus, je travaille avec des DTO que je dois transformer en entités OrientDB et là c'est un bonheur avec de grandes hiérarchies :-(
+
+Bref, pour toutes ces raisons j'ai basculé vers la base de données orientée Document...
+
+
 ## Base de données orientée Document
+
+
+
