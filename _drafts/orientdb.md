@@ -227,7 +227,7 @@ public interface OrientDbTransactionCallback<T> {
 
 En pratique la base de données orientée Objet de OrientDB fonctionne trés bien! Ca ressemble vraiment beaucoup au monde de Hibernate (en plus simple!).
 
-Mais dans mon cas, le problème vient du fait que justement, ça ressemble trop à Hibernate et qu'on se retrouve à nouveau à gérer des problèmes d'objets attachés/détachés, des problèmes de cascade, etc. De plus, je travaille avec des DTO que je dois transformer en entités OrientDB et là c'est un bonheur avec de grandes hiérarchies. Surtout que mes DTO ne contiennent pas les @Id de OrientDB :-(
+Mais dans mon cas, le problème vient du fait que justement, ça ressemble trop à Hibernate et qu'on se retrouve à nouveau à gérer des problèmes d'objets attachés/détachés, des problèmes de cascade, etc. De plus, je travaille avec des DTO que je dois transformer en entités OrientDB et là c'est un bonheur avec de grandes hiérarchies (style arbre). Surtout que mes DTO ne contiennent pas champs annotés @Id de OrientDB, ils utilisent d'autres champs (la plupart du temps combinés) pour gérer leur identité :-(
 
 Bref, pour toutes ces raisons j'ai basculé vers la base de données orientée Document...
 
@@ -237,7 +237,7 @@ Bref, pour toutes ces raisons j'ai basculé vers la base de données orientée D
 Comme expliqué précédemment, je n'avais pas choisi cette configuration de OrientDB pour éviter de faire le mapping à la main entre les entités et les documents.
 Mais OrientDB propose de populer les documents depuis du JSON... sauvé! :-)
 
-J'utilise [Gson](http://code.google.com/p/google-gson) pour serialiser/deserialiser le JSON.
+J'utilise [Gson](http://code.google.com/p/google-gson) pour serialiser/deserialiser les objets en JSON.
 
 ### Entités
 
@@ -363,8 +363,54 @@ private ODocument findUniqueDocument(ODatabaseDocumentTx db, HasUniqueProperties
 
 ### Accéder aux objects
 
+```java
+public <T> Iterable<T> list(final Class<T> clazz) {
+  try(ODatabaseDocumentTx db = serverFactory.getDocumentTx()) {
+    ORecordIteratorClass<ODocument> documents = db.browseClass(clazz.getSimpleName());
+    return Iterables.transform(documents, new Function<ODocument, T>() {
+      @Override
+      public T apply(ODocument document) {
+        return gson.fromJson(document.toJSON(), clazz);
+      }
+    });
+  }
+}
+```
+
 ### Requêtes SQL
 
+```java
+public <T> Iterable<T> list(final Class<T> clazz, String sql, Object... params) {
+  try(ODatabaseDocumentTx db = serverFactory.getDocumentTx()) {
+    List<ODocument> documents = db.query(new OSQLSynchQuery<ODocument>(sql), params);
+    return Iterables.transform(documents, new Function<ODocument, T>() {
+      @Override
+      public T apply(ODocument document) {
+        return gson.fromJson(document.toJSON(), clazz);
+      }
+    });
+  }
+}
+```
+
 ### Transaction template
+
+```java
+public <T> T execute(OrientDbTransactionCallback<T> callback) {
+  ODatabaseDocumentTx db = serverFactory.getDocumentTx();
+  try {
+    return callback.doInTransaction(db);
+  } catch(OException e) {
+    db.rollback();
+    throw e;
+  } finally {
+    db.close();
+  }
+}
+
+interface OrientDbTransactionCallback<T> {
+  T doInTransaction(ODatabaseDocumentTx db);
+}
+```
 
 ### Conclusion
