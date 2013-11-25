@@ -8,16 +8,10 @@ tags: [java, rest, spring]
 {% include JB/setup %}
 
 Petit billet en forme d'aide-mémoire pour configurer et documenter des service REST dans un serveur embarqué avec
-* RestEasy 3
-* Jetty 7
-* Spring 3
-* Swagger
-
-[RestEasy](http://www.jboss.org/resteasy) est l'implementation de JAX-RS par JBoss. J'étais plutot tenté par [Jersey](https://jersey.java.net/) mais un [bug](https://java.net/jira/browse/JERSEY-2175) sur l'integration avec Spring m'a empéché d'aller plus loin :(
-
-[Swagger](https://github.com/wordnik/swagger-core/wiki) permet de documenter ses services REST depuis le code. La documentation est ainsi toujours à jour avec le code...
-
-[Jetty](http://www.eclipse.org/jetty) est un serveur HTTP et conteneur de Servlets léger et facilement embarquable.
+* [RestEasy 3](http://www.jboss.org/resteasy) - Implementation de JAX-RS par JBoss. J'étais plutot tenté par [Jersey](https://jersey.java.net/) mais un [bug](https://java.net/jira/browse/JERSEY-2175) sur l'integration avec Spring m'a empéché d'aller plus loin :(
+* [Jetty 7](http://www.eclipse.org/jetty) - Serveur HTTP et conteneur de Servlets léger et facilement embarquable.
+* [Swagger](https://github.com/wordnik/swagger-core/wiki) - Permet de documenter ses services REST depuis le code. La documentation est ainsi toujours à jour avec le code...
+* [Spring 3](http://projects.spring.io/spring-framework)
 
 ## Dépendances
 
