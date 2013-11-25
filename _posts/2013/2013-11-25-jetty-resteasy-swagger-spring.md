@@ -3,7 +3,7 @@ layout: post
 title: "RestEasy + Jetty + Swagger + Spring"
 description: ""
 category: ""
-tags: [java, rest, spring]
+tags: [java, rest, spring, jetty, swagger]
 ---
 {% include JB/setup %}
 
@@ -304,7 +304,7 @@ GET `http://localhost:8080/ws/api-docs/spring`
 {
   "apiVersion": "1.0.0",
   "swaggerVersion": "1.2",
-  "basePath": "http://localhost:8085/ws",
+  "basePath": "http://localhost:8080/ws",
   "resourcePath": "/spring",
   "apis": [{
     "path": "/spring",
