@@ -218,6 +218,7 @@ public class SpringResource {
   }
 }
 
+===================
 
 public interface SpringPrototypeSubResource {
   @GET
@@ -225,6 +226,8 @@ public interface SpringPrototypeSubResource {
   @ApiResponses(value = { @ApiResponse(code = 200, message = "OK") })
   Response get();
 }
+
+===================
 
 @Component
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
@@ -240,12 +243,16 @@ public class SpringPrototypeSubResourceImpl implements SpringPrototypeSubResourc
   }
 }
 
+===================
+
 public interface SpringSingletonSubResource {
   @GET
   @ApiOperation(value = "SpringSingletonSubResource", notes = "More notes about this method")
   @ApiResponses(value = { @ApiResponse(code = 200, message = "OK") })
   Response get();
 }
+
+===================
 
 @Component
 @Transactional
