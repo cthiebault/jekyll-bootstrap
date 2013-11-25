@@ -23,7 +23,7 @@ Petit billet en forme d'aide-mémoire pour configurer et documenter des service 
 
 **build.gradle**
 
-```
+```groovy
 apply plugin: 'java'
 
 sourceCompatibility = JavaVersion.VERSION_1_6
@@ -261,7 +261,7 @@ public class SpringSingletonSubResourceImpl implements SpringSingletonSubResourc
 }
 ```
 
-## Et on test tout ca...
+## Et on teste tout ca...
 
 On démarre d'abord le serveur web:
 
@@ -281,7 +281,7 @@ Puis on test les ressources REST depuis Chrome avec l'extension [REST Console](h
 La documentation est accessible via:
 GET `http://localhost:8080/ws/api-docs`
 
-```
+```json
 {
   "apiVersion": "1.0.0",
   "swaggerVersion": "1.2",
@@ -299,7 +299,7 @@ GET `http://localhost:8080/ws/api-docs`
 
 GET `http://localhost:8080/ws/api-docs/spring`
 
-```
+```json
 {
   "apiVersion": "1.0.0",
   "swaggerVersion": "1.2",
