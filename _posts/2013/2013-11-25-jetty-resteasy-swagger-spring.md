@@ -9,7 +9,7 @@ tags: [java, rest, spring, jetty, swagger]
 
 Petit billet en forme d'aide-mémoire pour configurer et documenter des service REST dans un serveur embarqué avec
 
-* [RestEasy 3](http://www.jboss.org/resteasy) - Implementation de JAX-RS par JBoss. J'étais plutot tenté par [Jersey](https://jersey.java.net/) mais un [bug](https://java.net/jira/browse/JERSEY-2175) sur l'integration avec Spring m'a empéché d'aller plus loin :(
+* [RestEasy 3](http://www.jboss.org/resteasy) - Implémentation de JAX-RS par JBoss. J'étais plutôt tenté par [Jersey](https://jersey.java.net/) mais un [bug](https://java.net/jira/browse/JERSEY-2175) sur l'intégration avec Spring m'a empêché d'aller plus loin :(
 * [Jetty 7](http://www.eclipse.org/jetty) - Serveur HTTP et conteneur de Servlets léger et facilement embarquable.
 * [Swagger](https://github.com/wordnik/swagger-core/wiki) - Permet de documenter ses services REST depuis le code. La documentation est ainsi toujours à jour avec le code...
 * [Spring 3](http://projects.spring.io/spring-framework)
@@ -174,7 +174,7 @@ public class JettyServer {
 
 ## Ressources et sous-ressources REST
 
-Voivi un exemple avec des sous-ressources gérées par Spring (en tant que singleton et prototype).
+Voici un exemple avec des sous-ressources gérées par Spring (en tant que singleton et prototype).
 
 ```java
 @Path("/spring")
@@ -265,7 +265,7 @@ public class SpringSingletonSubResourceImpl implements SpringSingletonSubResourc
 }
 ```
 
-## Et on teste tout ca...
+## Et on teste tout ça...
 
 On démarre d'abord le serveur web:
 
@@ -277,7 +277,7 @@ public class Run {
 }
 ```
 
-Puis on test les ressources REST depuis Chrome avec l'extension [REST Console](https://chrome.google.com/webstore/detail/rest-console/cokgbflfommojglbmbpenpphppikmonn?hl=en)
+Puis on teste les ressources REST depuis Chrome avec l'extension [REST Console](https://chrome.google.com/webstore/detail/rest-console/cokgbflfommojglbmbpenpphppikmonn?hl=en)
 * GET `http://localhost:8080/ws/spring`
 * GET `http://localhost:8080/ws/spring/singleton`
 * GET `http://localhost:8080/ws/spring/prototype`
