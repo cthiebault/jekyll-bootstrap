@@ -13,6 +13,8 @@ Petit billet en forme d'aide-mémoire pour configurer et documenter des service 
 * [Swagger](https://github.com/wordnik/swagger-core/wiki) - Permet de documenter ses services REST depuis le code. La documentation est ainsi toujours à jour avec le code...
 * [Spring 3](http://projects.spring.io/spring-framework)
 
+<!-- more -->
+
 ## Dépendances
 
 **build.gradle**
