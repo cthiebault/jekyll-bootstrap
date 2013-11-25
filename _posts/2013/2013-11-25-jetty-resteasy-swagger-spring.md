@@ -114,7 +114,7 @@ public class JettyServer {
 
     createHttpConnector();
 
-    createJerseyServlet();
+    createRestEasyServlet();
 
     HandlerList handlers = new HandlerList();
     handlers.addHandler(servletContextHandler);
@@ -131,7 +131,7 @@ public class JettyServer {
     jettyServer.addConnector(httpConnector);
   }
 
-  private void createJerseyServlet() {
+  private void createRestEasyServlet() {
     ServletHolder servletHolder = new ServletHolder(new HttpServletDispatcher());
     servletHolder.setInitParameter("resteasy.servlet.mapping.prefix", "/ws");
     servletHolder.setInitOrder(1);
