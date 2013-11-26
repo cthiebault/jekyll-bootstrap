@@ -32,6 +32,12 @@ Je me suis basé sur [jekyllbootstrap](http://jekyllbootstrap.com) pour avoir un
 L'idée est de pouvoir écrire les billets en Markdown (à la saveur GitHub) :
 [Mimicking GitHub Flavored Markdown](http://jekyllrb.com/docs/github-pages)
 
+```
+sudo apt-get install ruby1.9.1 ruby1.9.1-dev rubygems1.9.1
+sudo gem install github-pages
+
+```
+
 #### Syntax highlighting
 
 Voici ma config pour la coloration des blocs de code :
