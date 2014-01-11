@@ -16,7 +16,7 @@ TODO: interests
 * Langages: Java, Javascript, Python, PHP
 * Frameworks: Spring Framework, Spring Batch, Hibernate Validator
 * Persistence: JTA, JPA/Hibernate, MongoDB, Neo4j, Spring Data
-* Web: GWT, Wicket, Spring MVC, CSS/LESS
+* Web: GWT (GWTP, SmartGWT), Wicket, Spring MVC, CSS/LESS
 * REST: RestEasy, Jersey, Spring MVC, Protocol Buffer, Swagger
 * Security: Shiro, Spring Security
 * Test: JUnit, Mockito, EasyMock
