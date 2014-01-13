@@ -13,8 +13,8 @@ TODO: interests
 
 ## Compétences techniques
 
-* Langages: Java, Javascript, Python, PHP
-* Frameworks: Spring Framework, Spring Batch, Hibernate Validator
+* Langage: Java, Javascript, Python, PHP
+* Framework: Spring Framework, Spring Batch, Hibernate Validator
 * Persistence: JTA, JPA/Hibernate, MongoDB, Neo4j, Spring Data
 * Web: GWT (GWTP, SmartGWT), Wicket, Spring MVC, Struts, CSS/LESS
 * REST: RestEasy, Jersey, Spring MVC, Protocol Buffer, Swagger
@@ -26,6 +26,7 @@ TODO: interests
 * SCM: Git, Subversion
 * CI: Jenkins
 * Environment: Linux, IntelliJ Idea, Eclipse
+* Methodology: Scrum, TDD, XP
 
 ## Expériences professionnelles
 
