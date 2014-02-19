@@ -7,10 +7,10 @@ tagline:
 
 # Cedric Thiebault - Développeur Java senior
 
-* Plus de 13 ans de développement Java avec une très bonne maîtrise des technologies open-source: J2EE/web/REST, GWT, Wicket, Spring Framework, Hibernate, etc.
+* Plus de 13 ans de développement Java avec une très bonne maîtrise des technologies open-source.
 * Très bonne expertise en architecture logicielle.
 * Expérience pertinente dans le domaine de l'épidémiologie et de la bioinformatique.
-* Très bon esprit d’analyse et capacité à travailler en équipe (SCRUM).
+* Très bon esprit d’analyse et capacité à travailler en équipe.
 
 ## Compétences techniques
 
@@ -31,21 +31,28 @@ tagline:
 
 ## Expériences professionnelles
 
-### OBiBa / Maelstrom Research, Montréal [juin 2010 - aujourd'hui]
+### Maelstrom Research / OBiBa, Montréal [juin 2010 - aujourd'hui]
+
+*[Maelstrom Research]() est la fusion de l'équipe scientifique de P3G et du projet [OBiBa]() qui développe des solutions open-source pour les biobanques.*
 
 #### Responsabilités :
-Senior, au sein d'une équipe de 5 développeurs, j'ai assumé les rôles d'architecte, analyste et développeur.
+Senior au sein d'une équipe de 5 développeurs, j'ai assumé des rôles d'architecte, analyste et développeur. 
+*TODO support*
 
 #### Réalisations :
-Développement d’applications web open source pour les études épidémiologiques et les biobanques. Le code source et mes contributions sont visibles sur  [GitHub](https://github.com/cthiebault).
+Développement d’applications web open source pour les études épidémiologiques et les biobanques. Le code source et mes contributions sont visibles sur [GitHub](https://github.com/cthiebault).
 
-1. logiciel d'interview des participants [Onyx](https://github.com/obiba/onyx)   
-  Réalisation  de l'éditeur de questionnaire sous Wicket 
+1. Gestionnaire de données des participants [Opal](https://github.com/obiba/opal)
+Refactoring majeur pour la version 2.0.
 
-1. gestionnaire de données des participants [Opal](https://github.com/obiba/opal)
+1. Logiciel d'interview des participants [Onyx](https://github.com/obiba/onyx)   
+Réalisation  de l'éditeur de questionnaire sous Wicket 
 
-1. portail pour les consortium d'études [Mica](https://github.com/obiba/mica)
- Application basee sous Drupal (PHP). Développement de plusieurs modules : catalogue d'études, de datasets, communication avec le gestionnaire de données des participants Opal.
+1. Portail pour les consortium d'études [Mica](https://github.com/obiba/mica)
+Application basée sur le CMS Drupal (PHP). Développement de plusieurs modules : catalogue d'études, de datasets, communication avec le gestionnaire de données des participants Opal.
+
+1. Ferme logicielle ?
+
 
 ### P3G, Montréal [mai 2007 - juin 2010]
 
