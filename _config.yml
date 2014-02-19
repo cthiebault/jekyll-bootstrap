@@ -15,6 +15,13 @@ redcarpet:
     - strikethrough
     - fenced_code_blocks
 
+asciidoc: asciidoctor
+asciidoctor:
+  attributes:
+    - hardbreaks!
+    - source-highlighter=coderay
+    - coderay-css=style
+
 # Publish future articles?
 future: false
 
