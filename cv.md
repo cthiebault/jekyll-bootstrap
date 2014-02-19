@@ -7,26 +7,27 @@ tagline:
 
 # Cedric Thiebault - Développeur Java senior
 
-<p class="lead">
-TODO: interests
-</p>
+* Plus de 13 ans de développement Java avec une très bonne maîtrise des technologies open-source: J2EE/web/REST, GWT, Wicket, Spring Framework, Hibernate, etc.
+* Très bonne expertise en architecture logicielle.
+* Expérience pertinente dans le domaine de l'épidémiologie et de la bioinformatique.
+* Très bon esprit d’analyse et capacité à travailler en équipe (SCRUM).
 
 ## Compétences techniques
 
-* Langage: Java, Javascript, Python, PHP
-* Framework: Spring Framework, Spring Batch, Hibernate Validator
-* Persistence: JTA, JPA/Hibernate, MongoDB, Neo4j, Spring Data
-* Web: GWT (GWTP, SmartGWT), Wicket, Spring MVC, Struts, CSS/LESS, Bootstrap
-* REST: RestEasy, Jersey, Spring MVC, Protocol Buffer, Swagger
-* Server: Tomcat, Jetty
-* Security: Shiro, Spring Security
-* Test: JUnit, Mockito, EasyMock
-* Search: Elastic Search, SolR
-* Build: Maven, Gradle
-* SCM: Git, Subversion
-* CI: Jenkins
-* Environment: Linux, IntelliJ Idea, Eclipse
-* Methodology: Scrum, TDD, XP
+* **Langage :** Java 7, Javascript, Python, PHP
+* **Framework :** Spring Framework, Spring Batch, Hibernate Validator
+* **Persistence :** JTA, JPA/Hibernate, MongoDB, Neo4j, Spring Data
+* **Web :** GWT (GWTP, SmartGWT), Wicket, Spring MVC, Struts, CSS/LESS, Bootstrap
+* **REST :** RestEasy, Jersey, Spring MVC, Protocol Buffer, Swagger
+* **Server :** Tomcat, Jetty
+* **Security :** Shiro, Spring Security
+* **Test :** JUnit, Mockito, EasyMock
+* **Search :** Elastic Search, SolR
+* **Build :** Gradle, Maven
+* **SCM :** Git, Subversion
+* **CI :** Jenkins
+* **Environment :** Linux, IntelliJ Idea, Eclipse
+* **Methodology :** Scrum, TDD, XP 
 
 ## Expériences professionnelles
 
@@ -36,10 +37,10 @@ TODO: interests
 Senior, au sein d'une équipe de 5 développeurs, j'ai assumé les rôles d'architecte, analyste et développeur.
 
 #### Réalisations :
-Développement d’applications web open source pour les études épidémiologiques et les biobanques :
+Développement d’applications web open source pour les études épidémiologiques et les biobanques. Le code source et mes contributions sont visibles sur  [GitHub](https://github.com/cthiebault).
 
-1. logiciel d'interview des participants [Onyx](https://github.com/obiba/onyx)
-  Developpement de l'éditeur de questionnaire sous Wicket 
+1. logiciel d'interview des participants [Onyx](https://github.com/obiba/onyx)   
+  Réalisation  de l'éditeur de questionnaire sous Wicket 
 
 1. gestionnaire de données des participants [Opal](https://github.com/obiba/opal)
 
@@ -118,3 +119,7 @@ Gain de temps lors des tests des nouvelles versions.
 * 1996-2001: Ingénieur en informatique et télécom réseaux diplômé de l’EFREI (Ecole Française d'Electronique et d'Informatique) - Paris, France.
 
 * 1996: Baccalauréat français scientifique.
+
+## Centres d’intérêt
+
+Parapente, snow-kite / kite-surf, ski, randonnée.
