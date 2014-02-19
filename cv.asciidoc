@@ -32,7 +32,7 @@ tagline:
 
 == Expériences professionnelles
 
-=== Maelstrom Research / OBiBa, Montréal [juin 2010 - aujourd'hui]
+=== Maelstrom Research / OBiBa, Montréal [small]#juin 2010 - aujourd'hui#
 
 _[Maelstrom Research]() est la fusion de l'équipe scientifique de P3G et du projet [OBiBa]() qui développe des solutions open-source pour les biobanques._
 
