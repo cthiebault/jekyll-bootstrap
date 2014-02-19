@@ -11,7 +11,7 @@ tagline:
 TODO: interests
 </p>
 
-## Compétences techniques
+== Compétences techniques
 
 * Langage: Java, Javascript, Python, PHP
 * Framework: Spring Framework, Spring Batch, Hibernate Validator
@@ -28,9 +28,9 @@ TODO: interests
 * Environment: Linux, IntelliJ Idea, Eclipse
 * Methodology: Scrum, TDD, XP
 
-## Expériences professionnelles
+== Expériences professionnelles
 
-### Axon ID  <small>déc. 2006 - mai 2007</small>
+=== Axon ID  [small]#déc. 2006 - mai 2007#
 Poursuite du développement du gestionnaire de document MxDoc en y intégrant le gestionnaire de connaissance Blink (plateforme web sémantique).
 
 ### Août 2005 – Sept. 2006 McGill / Génome Québec – www.genomequebec.mcgill.ca, Montréal
