@@ -1,0 +1,78 @@
+---
+layout: page
+title: Curriculum Vitae
+tagline:
+---
+{% include JB/setup %}
+
+# Cedric Thiebault - Développeur Java senior
+
+<p class="lead">
+TODO: interests
+</p>
+
+## Compétences techniques
+
+* Langage: Java, Javascript, Python, PHP
+* Framework: Spring Framework, Spring Batch, Hibernate Validator
+* Persistence: JTA, JPA/Hibernate, MongoDB, Neo4j, Spring Data
+* Web: GWT (GWTP, SmartGWT), Wicket, Spring MVC, Struts, CSS/LESS
+* REST: RestEasy, Jersey, Spring MVC, Protocol Buffer, Swagger
+* Server: Tomcat, Jetty
+* Security: Shiro, Spring Security
+* Test: JUnit, Mockito, EasyMock
+* Search: Elastic Search, SolR
+* Build: Maven, Gradle
+* SCM: Git, Subversion
+* CI: Jenkins
+* Environment: Linux, IntelliJ Idea, Eclipse
+* Methodology: Scrum, TDD, XP
+
+## Expériences professionnelles
+
+### Axon ID, Montréal [déc. 2006 - mai 2007]
+
+
+### McGill / Génome Québec, Montréal [août 2005 – sept. 2006]
+*Responsabilités :* Automatiser les étapes d’analyse des protéines en centralisant les données entre les différents instruments du laboratoire. Centraliser l’accès aux applications et aux données du laboratoire.
+
+*Réalisations :* Développement d’un LIMS (Laboratory Information Management Systems). Réalisation des modules suivants :
+* modélisation et capture des données biologiques
+* agents de communication (RMI/JMS) entre l’application centrale et les instruments
+* gestion du flux des échantillons à analyser par les instruments et collecte des résultats
+Conception et mise en place d’un portail relié aux autres applications du laboratoire avec authentification unique (CAS, Central Authentication Service).
+
+### DistinctHorizon, Montréal [avril 2003 – août 2005]
+*Responsabilités :* Analyser les besoins des clients, rédiger les spécifications, modéliser les modules en UML, développer et tester ces modules. Maintenir le plan de développement et rédiger les SOP. Concevoir l’architecture de l’application et choisir les technologies impliquées.
+
+*Réalisations :* Réalisation d’un gestionnaire de document, MxDoc, destiné aux entreprises pharmaceutiques et bioinformatiques (FDA compliance - CFR21 part 11).
+Participation au développement des modules suivants :
+* applet avec vue synchronisée du système de fichier et transfert de ces derniers
+* workflow et metadata
+* utilisateurs et groupes
+* permissions et sécurité des données (MD5, SHA)
+
+### InpixMedia, Montréal [mai 2002 - avril 2003]
+*Responsabilités :* Fidéliser les membres de la base de données de Futureshop.ca et récolter des informations dans le cadre des activités de marketing direct en ligne de l’un des plus importants détaillants sur le Web au Canada.
+
+*Réalisations :* Développement d’une application web permettant la mise en ligne de microsites promotionnels. Réalisation d’un module autonome permettant aux clients de gérer eux-mêmes leur campagne d’envoi d’infolettre.
+
+### YY Technologies – Mountain View, Californie, USA [fév. – sept. 2001]
+*Responsabilités :* Créer des outils de test qui facilitent la validation des nouvelles versions du produit (application comprenant le langage naturel).
+
+*Réalisations :* Développement d’un module permettant le transfert d’une boîte aux lettres mail vers une base de données, ainsi que sa consultation (adaptation du module JavaMail en SQL).
+Création d’un outil de normalisation d’email en Java, C++ et Perl.
+
+### YY Technologies - Mountain View, Californie, USA [avril – août 2000]
+*Responsabilités :* Développer sous Unix un outil comparant deux boîtes aux lettres.
+Créer un module, intégré au programme, qui étudie la performance du produit.
+
+*Réalisations :* Accroissement sensible en efficacité du logiciel.
+Gain de temps lors des tests des nouvelles versions.
+
+
+## Cursus scolaire
+
+* 1996-2001: Ingénieur en informatique et télécom réseaux diplômé de l’EFREI (Ecole Française d'Electronique et d'Informatique) - Paris, France.
+
+* 1996: Baccalauréat français scientifique.
