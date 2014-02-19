@@ -58,14 +58,14 @@ Application basée sur le CMS Drupal (PHP). Développement de plusieurs modules 
 
 #### Responsabilités :
 Responsable du développement informatique : 
-- gestion d'équipe (deux programmeurs)
-- analyse des besoins des chercheurs
-- conception de l’architecture des applications et choix des technologies impliquées
-- mise en place de la méthodologie SCRUM.
+* gestion d'équipe (deux programmeurs)
+* analyse des besoins des chercheurs
+* conception de l’architecture des applications et choix des technologies impliquées
+* mise en place de la méthodologie SCRUM.
 
 #### Réalisations :
-Développement d’un gestionnaire de contenu pour décrire les études épidémiologiques  (p3gobservatory.org). Composé d’une application d’administration (Wicket, Spring, Hibernate) pour la publication et révision du contenu et d’une application publique (Spring MVC et communication REST avec le module d’administration).
-Développement d’une application permettant de faciliter l'harmonisation des données des études épidémiologiques  (datashaper.org). Les données sont stockées sous forme ontologique (RDF) avec OpenRDF/Sesame. L’interface utilise SmartGWT et REST pour communiquer avec le serveur.
+* Développement d’un gestionnaire de contenu pour décrire les études épidémiologiques  (p3gobservatory.org). Composé d’une application d’administration (Wicket, Spring, Hibernate) pour la publication et révision du contenu et d’une application publique (Spring MVC et communication REST avec le module d’administration).
+* Développement d’une application permettant de faciliter l'harmonisation des données des études épidémiologiques  (datashaper.org). Les données sont stockées sous forme ontologique (RDF) avec OpenRDF/Sesame. L’interface utilise SmartGWT et REST pour communiquer avec le serveur.
 
 ### Axon ID, Montréal [déc. 2006 - mai 2007]
 
