@@ -7,7 +7,7 @@ tagline:
 
 # Cedric Thiebault - Développeur Java senior
 
-* Plus de 13 ans de développement Java avec une très bonne maîtrise des technologies open-source.
+* Plus de 13 ans de développement Java backend & frontend avec une très bonne maîtrise des technologies open-source.
 * Très bonne expertise en architecture logicielle.
 * Expérience pertinente dans le domaine de l'épidémiologie et de la bioinformatique.
 * Très bon esprit d’analyse et capacité à travailler en équipe.
@@ -16,7 +16,7 @@ tagline:
 
 * **Langage :** Java 7, Javascript, Python, PHP
 * **Framework :** Spring Framework, Spring Batch, Hibernate Validator
-* **Persistence :** JTA, JPA/Hibernate, MongoDB, Neo4j, Spring Data
+* **Persistence :** JTA, JPA/Hibernate, MongoDB, Neo4j, Spring Data, OrientDB
 * **Web :** GWT (GWTP, SmartGWT), Wicket, Spring MVC, Struts, CSS/LESS, Bootstrap
 * **REST :** RestEasy, Jersey, Spring MVC, Protocol Buffer, Swagger
 * **Server :** Tomcat, Jetty
@@ -26,6 +26,7 @@ tagline:
 * **Build :** Gradle, Maven
 * **SCM :** Git, Subversion
 * **CI :** Jenkins
+* **Cloud :** Amazon EC2
 * **Environment :** Linux, IntelliJ Idea, Eclipse
 * **Methodology :** Scrum, TDD, XP 
 
@@ -40,16 +41,22 @@ Senior au sein d'une équipe de 5 développeurs, j'ai assumé des rôles d'archi
 *TODO support*
 
 #### Réalisations :
-Développement d’applications web open source pour les études épidémiologiques et les biobanques. Le code source et mes contributions sont visibles sur [GitHub](https://github.com/cthiebault).
+Développement d’applications web open source pour les études épidémiologiques et les biobanques. Mes contributions sont visibles sur [GitHub](https://github.com/cthiebault).
+
+* migration de projets Maven vers Gradle
+* benchmark, profiling et optimisation des services les plus lents
+* mise en place de OrientDB pour remplacer Hibernate/HSQLDB
+
 
 1. Gestionnaire de données des participants [Opal](https://github.com/obiba/opal)
 Refactoring majeur pour la version 2.0.
+
 
 1. Logiciel d'interview des participants [Onyx](https://github.com/obiba/onyx)   
 Réalisation  de l'éditeur de questionnaire sous Wicket 
 
 1. Portail pour les consortium d'études [Mica](https://github.com/obiba/mica)
-Application basée sur le CMS Drupal (PHP). Développement de plusieurs modules : catalogue d'études, de datasets, communication avec le gestionnaire de données des participants Opal.
+Application basée sur le CMS Drupal (PHP). Développement de plusieurs modules : catalogue d'études, de datasets, communication avec le gestionnaire de données des participants Opal en REST.
 
 1. Ferme logicielle ?
 
@@ -60,7 +67,7 @@ Application basée sur le CMS Drupal (PHP). Développement de plusieurs modules 
 Responsable du développement informatique : 
 * gestion d'équipe (deux programmeurs)
 * analyse des besoins des chercheurs
-* conception de l’architecture des applications et choix des technologies impliquées
+* conception de l’architecture des applications et choix des technologies impliquées (veille technologique et R&D)
 * mise en place de la méthodologie SCRUM.
 
 #### Réalisations :
