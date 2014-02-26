@@ -223,7 +223,7 @@ public interface OrientDbTransactionCallback<T> {
 }
 ```
 
-### Conclusion
+### Conclusion pour la base de données orientée Objet
 
 En pratique la base de données orientée Objet de OrientDB fonctionne trés bien! Ca ressemble vraiment beaucoup au monde de Hibernate (en plus simple!).
 
@@ -413,4 +413,9 @@ interface OrientDbTransactionCallback<T> {
 }
 ```
 
-### Conclusion
+## Conclusion
+
+Et voila pour un rapide aperçu de OrientDB.    
+En pratique sur notre projet ca fonctionne trés bien. De plus le développement du produit semble assez actif et la communauté grandit vite!
+
+Je vous laisse essayer...
