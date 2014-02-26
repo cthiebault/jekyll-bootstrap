@@ -7,7 +7,9 @@ tags: [java, test]
 ---
 {% include JB/setup %}
 
-Rien de révolutionnaire ici mais je viens de découvrir (avec beaucoup de retard) la libraire d'assertion [Fest](https://github.com/alexruiz/fest-assert-2.x).
+Rien de révolutionnaire ici mais je viens de découvrir (avec beaucoup de retard) la libraire d'assertion [Fest](https://github.com/alexruiz/fest-assert-2.x) qui nou apporte beaucoup en confort de travail lors de nos test unitaires.
+
+<!-- more -->
 
 [Junit](http://junit.org) nous offre déjà des méthodes d'assertions.
 
