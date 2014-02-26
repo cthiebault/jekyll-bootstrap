@@ -11,6 +11,8 @@ Rien de révolutionnaire ici mais je viens de découvrir (avec beaucoup de retar
 
 <!-- more -->
 
+## JUnit
+
 [Junit](http://junit.org) nous offre déjà des méthodes d'assertions.
 
 ```java
@@ -28,6 +30,8 @@ public class JunitTest {
   }
 }
 ```
+
+## Hamcrest
 
 [Hamcrest](http://hamcrest.org) nous apporte une syntaxe plus riche... mais il faut connaître les [matchers](https://code.google.com/p/hamcrest/wiki/Tutorial#A_tour_of_common_matchers) disponibles.
 
@@ -50,6 +54,8 @@ public class HamcrestTest {
 ```
 
 Pas super lisible tout ça...
+
+## Fest Assert
 
 [Fest](https://github.com/alexruiz/fest-assert-2.x) apporte une syntaxe "fluent" plus riche, plus lisible et surtout on peut profiter pleinement du "auto-complete" de notre IDE préféré :-)
 
