@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Wicket & Spring"
+title: "Wicket et Spring"
 description: ""
 category: ""
 tags: [wicket, spring]
