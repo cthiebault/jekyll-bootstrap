@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Wicket & Maven packaging (fichiers html, css, js...)"
+title: "Wicket et Maven packaging (fichiers html, css, js...)"
 description: ""
 category: ""
 tags: [wicket, maven]
