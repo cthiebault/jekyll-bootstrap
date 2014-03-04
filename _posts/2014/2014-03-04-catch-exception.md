@@ -11,6 +11,8 @@ tags: [java, test]
 Dans la lignée de mon billet precedent, voici un petit outil pour vérifier vos exceptions lors de vos tests unitaires :
 [catch-exception](https://code.google.com/p/catch-exception).
 
+<!-- more -->
+
 Plusieurs solutions s'offrent à nous pour tester les exceptions :
 
 
