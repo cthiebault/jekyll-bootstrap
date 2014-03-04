@@ -5733,8 +5733,15 @@ a.rss-link {
   color: #333333;
 }
 .resume h2 {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .resume .company-url {
   margin: -10px 0 10px 0;
+}
+.resume .dates {
+  text-align: right;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1;
+  color: #999999;
 }
