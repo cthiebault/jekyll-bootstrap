@@ -35,14 +35,16 @@ title : Cedric Thiebault - CV fr
   </div>
 </nav>
 
-<div class="container">
+<div class="container resume">
 
-  <h1>Architecte / développeur senior Java</h1>
+  <h1 class="page-header">Architecte / développeur senior Java</h1>
 
   <p class="lead">
     Ingénieur informatique fort d’une expérience de 13 ans en développement Java et plus de 4 ans en architecture
     logicielle, je cherche à élargir et partager mes compétences en Suisse.
-    <br/>
+  </p>
+
+  <p class="lead">
     Je cherche un poste combinant architecture et développement Java au sein d’une entreprise aux technologies
     innovantes liées à l'open-source.
   </p>
@@ -109,6 +111,83 @@ title : Cedric Thiebault - CV fr
   </dl>
 
   <h2 id="experiences">Expériences professionnelles</h2>
+
+  <h3>Maelstrom Research / OBiBa - Montréal
+    <small>[ juin 2010 - aujourd'hui ]</small>
+  </h3>
+  <a href="http://maelstrom-research.org" target="_blank">http://maelstrom-research.org</a> /
+  <a href="http://obiba.org" target="_blank">http://obiba.org</a>
+
+  <p>
+    Maelstrom Research est la fusion d’une équipe de chercheurs en épidémiologie et du projet de développement de
+    logiciel libre OBiBa.
+  </p>
+
+  <p>
+    Senior au sein d'une équipe de 5 programmeurs, je participe au développement d’applications web open source pour les
+    études épidémiologiques et les biobanques. Mes contributions sont visibles sur GitHub
+    (https://github.com/cthiebault).
+  </p>
+
+  <h4>Responsabilités</h4>
+  <ul>
+    <li>Analyse des besoins. Abstraction et séparation des problèmes. Rédaction des user stories et création des
+      mockup/wireframe
+    </li>
+    <li>Architecture, choix des design patterns et des technologies</li>
+    <li>Veille technologique et preuves de concept</li>
+    <li>Développement en itération Scrum</li>
+    <li>
+      Support des utilisateurs
+      (<a href="https://groups.google.com/forum/#!forum/obiba-users" target="_blank">https://groups.google.com/forum/#!forum/obiba-users</a>)
+    </li>
+  </ul>
+
+
+  <h4>Réalisations</h4>
+
+  <h5>Projet : <a href="https://github.com/obiba/opal" target="_blank">Opal</a></h5>
+
+  <p>
+    Gestionnaire de données des participants (application web disponible sous forme de package Debian).
+    <br/>
+    Refonte majeure et développement de nouvelles fonctionnalités pour la version 2.0 :
+  </p>
+  <ul>
+    <li>Migration d’important projets Maven vers Gradle</li>
+    <li>Benchmark, profiling et optimisation des services les plus lents</li>
+    <li>Mise en place de OrientDB pour remplacer Hibernate/HSQLDB</li>
+    <li>Migration du framework MVP pour GWT de gwt-presenter vers GwtP et Gwt-bootstrap</li>
+    <li>Configuration des transaction JTA (JOTM) et Hibernate pour supporter la création/destruction de multiple
+      SessionFactory au runtime
+    </li>
+    <li>Optimisation du module MongoDB pour rattraper les performances du module Hibernate</li>
+    <li>Mise en place de Bean Validation</li>
+    <li>Mise en place d’outils permettant d’augmenter la qualité du code lors le cycle de développement (PMD, findBugs,
+      Jenkins, Sonar, etc.)
+    </li>
+  </ul>
+
+
+  <h5>Projet : <a href="https://github.com/obiba/onyx" target="_blank">Onyx</a></h5>
+
+  <p>Logiciel d'interview des participants :</p>
+  <ul>
+    <li>Réalisation de l'éditeur de questionnaire sous Wicket</li>
+    <li>Support des question de type vidéo (html5) et audio (servlet pour enregistrer)</li>
+    <li>Support de LDAP et Atlassian Crowd pour l'authentification (via Shiro)</li>
+  </ul>
+
+
+  <h5>Projet : <a href="https://drupal.org/project/mica_distribution" target="_blank">Mica</a></h5>
+
+  <p>Portail pour les consortium d'études. Application basée sur le CMS Drupal (PHP) :</p>
+  <ul>
+    <li>Développement de plusieurs modules : catalogue d'études, de datasets, demandes d'accès aux données, etc.</li>
+    <li>Communication avec le gestionnaire de données des participants Opal en REST</li>
+    <li>Création d’un thème basé sur Bootstrap en utilisant LESS</li>
+  </ul>
+
 
   <h2 id="academic">Cursus scolaire</h2>
 
