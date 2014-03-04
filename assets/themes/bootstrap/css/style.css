@@ -5732,3 +5732,9 @@ ul.tag_box a.active {
 a.rss-link {
   color: #333333;
 }
+.resume h2 {
+  margin-top: 20px;
+}
+.resume .company-url {
+  margin: -10px 0 10px 0;
+}
