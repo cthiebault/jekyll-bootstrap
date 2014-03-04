@@ -5735,6 +5735,12 @@ a.rss-link {
 .resume h2 {
   margin-top: 40px;
 }
-.resume .dates {
+.resume .company h3 {
+  margin-bottom: 3px;
+}
+.resume .company .dates {
   text-align: right;
+}
+.resume .first {
+  margin-top: 10.5px;
 }
