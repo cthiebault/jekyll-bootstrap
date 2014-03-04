@@ -9,4 +9,4 @@ tags: [java, performance]
 
 Dans le dernier episode des Cast Codeurs sur CloudBees, ils disaient qu'une des applications les plus populaires sur la plateforme etait [New Relic](http://newrelic.com/).
 
-New Relic est une application qui monitore vos applications
+New Relic est une application (SaaS) qui monitore vos applications
