@@ -5704,8 +5704,11 @@ ul.tag_box a.active {
 a.rss-link {
   color: #333333;
 }
+.resume {
+  padding-bottom: 20px;
+}
 .resume h2 {
-  margin-top: 40px;
+  margin-top: 50px;
 }
 .resume .company h3 {
   margin-bottom: 3px;
