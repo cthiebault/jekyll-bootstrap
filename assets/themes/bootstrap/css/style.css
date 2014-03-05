@@ -5711,6 +5711,11 @@ a.rss-link {
   background: url("../../../../images/java32.png") no-repeat left center;
   padding-left: 38px;
 }
+.resume #scrolling-container {
+  position: relative;
+  /* required by spy  */
+
+}
 .resume .doc-header {
   padding-top: 80px;
   padding-bottom: 40px;
