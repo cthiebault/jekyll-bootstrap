@@ -4,7 +4,27 @@ title : CV C&eacute;dric Thi&eacute;bault - Architecte / d&eacute;veloppeur seni
 ---
 {% include JB/setup %}
 
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+<script>
+var offsetHeight = 51;
+
+$('body').scrollspy({
+  target: '.resume-navbar',
+  offset: offsetHeight
+});
+
+$('.navbar li a').click(function (event) {
+  var scrollPos = $('body > .container').find($(this).attr('href')).offset().top - (offsetHeight - 1);
+  $('body,html').animate({
+    scrollTop: scrollPos
+  }, 500, function () {
+      $(".btn-navbar").click();
+  });
+  return false;
+});  
+  
+</script>
+
+<nav class="navbar navbar-default navbar-fixed-top resume-navbar" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar-collapse">
