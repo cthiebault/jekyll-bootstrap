@@ -5708,7 +5708,7 @@ a.rss-link {
   padding-bottom: 20px;
 }
 .resume .navbar-brand {
-  background: url('../../../../images/java32.png') no-repeat left center;
+  background: url("../../../../images/java32.png") no-repeat left center;
   padding-left: 38px;
 }
 .resume .doc-header {
