@@ -4,27 +4,7 @@ title : CV C&eacute;dric Thi&eacute;bault - Architecte / d&eacute;veloppeur seni
 ---
 {% include JB/setup %}
 
-<script>
-var offsetHeight = 51;
-
-$('body').scrollspy({
-  target: '.resume-navbar',
-  offset: offsetHeight
-});
-
-$('.navbar li a').click(function (event) {
-  var scrollPos = $('body > .container').find($(this).attr('href')).offset().top - (offsetHeight - 1);
-  $('body,html').animate({
-    scrollTop: scrollPos
-  }, 500, function () {
-      $(".btn-navbar").click();
-  });
-  return false;
-});  
-  
-</script>
-
-<nav class="navbar navbar-default navbar-fixed-top resume-navbar" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar-collapse">
@@ -43,6 +23,7 @@ $('.navbar li a').click(function (event) {
         <li><a href="#work">Exp&eacute;riences professionnelles</a></li>
         <li><a href="#school">Cursus scolaire</a></li>
         <li><a href="#interests">Centres d&rsquo;int&eacute;r&ecirc;t</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -486,6 +467,22 @@ $('.navbar li a').click(function (event) {
   Parapente (dipl&ocirc;me d&rsquo;instructeur de la f&eacute;d&eacute;ration Qu&eacute;b&eacute;coise de vol libre),
   kite-surf / snowkite, longue
   randonn&eacute;e.
+</p>
+
+<h2 id="contact">Contact</h2>
+
+<p itemscope="" itemtype="http://data-vocabulary.org/Person">
+  <a href="mailto:cedric.thiebault@gmail.com" itemprop="url">
+    <i class="fa fa-envelope-ofa-3x vertical-middle"> </i> 
+    <span itemprop="email">cedric.thiebault@gmail.com</span>
+  </a>
+</p>
+
+<p itemscope="" itemtype="http://data-vocabulary.org/Person">
+  <a href="https://github.com/cthiebault" class="pull-right" itemprop="url">
+    <i class="fa fa-github fa-3x vertical-middle"> </i>
+    <span itemprop="name">Cedric Thiebault</span>
+  </a>
 </p>
 
 </div>
