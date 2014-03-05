@@ -5707,8 +5707,31 @@ a.rss-link {
 .resume {
   padding-bottom: 20px;
 }
+.resume .doc-header {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  font-size: 24px;
+  text-align: left;
+  margin-bottom: 40px;
+  position: relative;
+  color: #cdbfe3;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  background-color: #6f5499;
+  background-image: linear-gradient(to bottom, #563d7c 0, #6f5499 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0);
+}
+.resume .doc-header h1 {
+  margin: 0 0 25px 0;
+  color: #fff;
+  font-size: 50px;
+  line-height: 1;
+}
 .resume h2 {
   margin-top: 50px;
+}
+.resume h2:first-child {
+  margin-top: inherit;
 }
 .resume .company h3 {
   margin-bottom: 3px;
