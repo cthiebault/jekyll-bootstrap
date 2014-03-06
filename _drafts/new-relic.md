@@ -40,7 +40,7 @@ Téléchargez le ficher de configuration `newrelic.yml` depuis votre compte et e
 
 ### Démarrez votre application
 
-Specifiez seulement le chemin de l'agent dans votre commande java :
+Spécifiez seulement le chemin de l'agent lors de l'execution de votre commande java :
 
 ```
 -javaagent:<web-app-lib-path>/newrelic-agent-3.4.2.jar
