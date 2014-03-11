@@ -5615,10 +5615,16 @@ ul.listing li span {
   font-size: 12px;
   color: #999;
 }
-.navbar-blog,
-.navbar-blog a.brand {
+.navbar-blog {
   font-weight: 100;
   text-transform: uppercase;
+}
+.navbar-blog .navbar-brand {
+  background: url("../../../../images/java32.png") no-repeat left center;
+  padding-left: 38px;
+}
+.navbar-nav.navbar-right:last-child {
+  padding-right: 15px;
 }
 #footer {
   margin-top: 50px;
