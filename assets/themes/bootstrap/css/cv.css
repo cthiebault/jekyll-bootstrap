@@ -5720,7 +5720,7 @@ a.rss-link {
   padding-top: 70px;
   padding-bottom: 0;
 }
-.resume .doc-header {
+.resume section#header {
   padding-bottom: 40px;
   font-size: 24px;
   text-align: left;
@@ -5732,11 +5732,16 @@ a.rss-link {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0);
 }
-.resume .doc-header h1 {
+.resume section#header h1 {
   margin: 0 0 25px 0;
   color: #fff;
   font-size: 50px;
   line-height: 1;
+}
+.resume section#school,
+.resume section#interests,
+.resume section#contact {
+  padding-top: 50px;
 }
 .resume h2 {
   margin-top: 50px;
