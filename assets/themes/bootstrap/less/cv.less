@@ -53,6 +53,8 @@
 @font-size-base: 15px;
 @headings-font-weight: 100;
 
+@grid-float-breakpoint: @screen-md-min;
+
 body {
   padding-top: 50px;
 }
@@ -245,4 +247,73 @@ ul.tag_box {
 
 a.rss-link {
   color: @text-color;
+}
+
+.resume {
+
+  padding-bottom: 20px;
+
+  .navbar-brand {
+    background: url("@{img-path}/java32.png") no-repeat left center;
+    padding-left: 38px;
+  }
+
+  #scrolling-container {
+    position: relative; /* required by spy  */
+  }
+
+  section {
+    padding-top: 70px;
+    padding-bottom: 0;
+
+    &:nth-child(odd) {
+//      color: green;
+    }
+    &:nth-child(even) {
+      background: #ededed;
+    }
+
+  }
+
+  .doc-header {
+    padding-bottom: 40px;
+    font-size: 24px;
+    text-align: left;
+    position: relative;
+    color: #cdbfe3;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+    background-color: #6f5499;
+    background-image: linear-gradient(to bottom, #563d7c 0, #6f5499 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0);
+
+    h1 {
+      margin: 0 0 25px 0;
+      color: #fff;
+      font-size: 50px;
+      line-height: 1;
+    }
+  }
+
+  h2 {
+    &:first-child {
+      margin-top: inherit;
+    }
+    margin-top: 50px;
+  }
+
+  .company {
+    h3 {
+      margin-bottom: 3px;
+    }
+    .dates {
+      text-align: right;
+    }
+  }
+
+  .first {
+    // like h4
+    margin-top: (@line-height-computed / 2);
+  }
+
 }
