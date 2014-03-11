@@ -5716,12 +5716,14 @@ a.rss-link {
   /* required by spy  */
 
 }
+.resume section {
+  padding-top: 70px;
+  padding-bottom: 0;
+}
 .resume .doc-header {
-  padding-top: 80px;
   padding-bottom: 40px;
   font-size: 24px;
   text-align: left;
-  margin-bottom: 40px;
   position: relative;
   color: #cdbfe3;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
