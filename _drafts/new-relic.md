@@ -7,7 +7,7 @@ tags: [java, performance]
 ---
 {% include JB/setup %}
 
-J'ai découvert le service de monitoring [New Relic](http://newrelic.com) en écoutant le dernier épisode des [Cast Codeurs sur CloudBees](http://lescastcodeurs.com/2014/02/20/lcc-96-interview-sur-cloudbees-et-le-paas-avec-nicolas-deloof). Nicolas Deloof disait que c’était une des applications les plus populaires sur leur plateforme...
+J'ai découvert le service de monitoring [New Relic](http://newrelic.com) en écoutant les [Cast Codeurs sur CloudBees](http://lescastcodeurs.com/2014/02/20/lcc-96-interview-sur-cloudbees-et-le-paas-avec-nicolas-deloof). Nicolas Deloof disait que c’était une des applications les plus populaires sur leur plateforme...
 
 [New Relic](http://newrelic.com) est une service (SaaS) qui surveille les performances des applications web.
 Son agent collecte et agrège des métriques de performance de l'application en production.
@@ -55,5 +55,5 @@ New Relic s'attend à trouver le fichier de config `newrelic.yml` dans le même 
 ### Analysez les performances
 
 
-
+Ouvrez une session sur [New Relic](http://newrelic.com) et accédez au tableau de bord des applications. Maintenant il ne vous reste plus qu'à fouiller dans toutes ces statistiques!
 
