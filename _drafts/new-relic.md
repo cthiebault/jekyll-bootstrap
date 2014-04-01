@@ -12,6 +12,8 @@ J'ai découvert le service de monitoring [New Relic](http://newrelic.com) en éc
 [New Relic](http://newrelic.com) est une service (SaaS) qui surveille les performances des applications web.
 Son agent collecte et agrège des métriques de performance de l'application en production.
 
+L'avantage de cette approche par rapport à des libraireis comme [Metrics](http://metrics.codahale.com) est que l'on n'a rien a faire dans le code... vous
+
 La mise en oeuvre est ultra simple!
 
 ### Créez un compte
