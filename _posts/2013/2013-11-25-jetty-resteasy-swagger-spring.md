@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "RestEasy + Swagger + Jetty  + Spring"
+title: "RestEasy + Swagger + Jetty + Spring"
 description: ""
 category: ""
 tags: [java, rest, spring, jetty, swagger, resteasy]

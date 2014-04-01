@@ -12,7 +12,7 @@ J'ai découvert le service de monitoring [New Relic](http://newrelic.com) en éc
 [New Relic](http://newrelic.com) est une service (SaaS) qui surveille les performances des applications web.
 Son agent collecte et agrège des métriques de performance de l'application en production.
 
-L'avantage de cette approche par rapport à des libraireis comme [Metrics](http://metrics.codahale.com) est que l'on n'a rien a faire dans le code... vous
+L'avantage de cette approche par rapport à des librairies comme [Metrics](http://metrics.codahale.com) est que l'on n'a rien à faire dans le code... par contre on externalise la collecte et l'analyse.
 
 La mise en oeuvre est ultra simple!
 
@@ -42,7 +42,7 @@ Téléchargez le ficher de configuration `newrelic.yml` depuis votre compte et e
 
 ### Démarrez votre application
 
-Spécifiez seulement le chemin de l'agent lors de l'execution de votre commande java :
+Spécifiez seulement le chemin de l'agent lors de l'exécution de votre commande java :
 
 ```
 -javaagent:<web-app-lib-path>/newrelic-agent-3.4.2.jar
@@ -56,6 +56,4 @@ New Relic s'attend à trouver le fichier de config `newrelic.yml` dans le même 
 
 ### Analysez les performances
 
-
 Ouvrez une session sur [New Relic](http://newrelic.com) et accédez au tableau de bord des applications. Maintenant il ne vous reste plus qu'à fouiller dans toutes ces statistiques!
-
