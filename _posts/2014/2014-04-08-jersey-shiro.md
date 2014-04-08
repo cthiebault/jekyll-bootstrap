@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Jersey + Shiro + Spring"
+title: "Jersey + Shiro annotations + Spring"
 description: ""
 category: ""
 tags: [java, rest, shiro, jersey, spring]
