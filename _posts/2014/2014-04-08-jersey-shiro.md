@@ -196,3 +196,6 @@ public class ShiroRequiresPermissionsFeature implements DynamicFeature {
   }
 }
 ```
+
+Pour les autres annotations, allez voir sur mon profil GitHub :
+[https://github.com/cthiebault/jersey-shiro-annotations](https://github.com/cthiebault/jersey-shiro-annotations)
