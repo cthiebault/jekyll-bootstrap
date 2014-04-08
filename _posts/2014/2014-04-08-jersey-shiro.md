@@ -11,6 +11,8 @@ tags: [java, rest, shiro, jersey, spring]
 Dans ce billet je vais présenter comment supporter dans [Jersey 2.7](https://jersey.java.net) les annotations
 `RequiresAuthentication`, `RequiresRoles`, `RequiresPermissions`, etc. de [Shiro 1.2](http://shiro.apache.org).
 
+<!-- more -->
+
 Exemple d'utilisation des annotations dans des ressources et des sous-ressources :
 
 ```java
