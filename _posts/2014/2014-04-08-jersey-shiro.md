@@ -69,7 +69,6 @@ public class UserResource {
     userRepository.delete(name);
     return Response.noContent().build();
   }
-
 }
 
 ```
@@ -195,6 +194,5 @@ public class ShiroRequiresPermissionsFeature implements DynamicFeature {
       return null;
     }
   }
-
 }
 ```
