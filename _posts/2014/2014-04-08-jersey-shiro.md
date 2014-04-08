@@ -107,6 +107,28 @@ Voici à quoi ça ressemble pour l'annotation `@RequiresPermissions` :
 
 
 ```java
+package com.surunairdejava.shiro;
+
+import java.io.IOException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Collection;
+
+import javax.annotation.Priority;
+import javax.ws.rs.ForbiddenException;
+import javax.ws.rs.Priorities;
+import javax.ws.rs.container.ContainerRequestContext;
+import javax.ws.rs.container.ContainerRequestFilter;
+import javax.ws.rs.container.DynamicFeature;
+import javax.ws.rs.container.ResourceInfo;
+import javax.ws.rs.core.FeatureContext;
+import javax.ws.rs.ext.Provider;
+
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @Provider
 public class ShiroRequiresPermissionsFeature implements DynamicFeature {
 
@@ -119,19 +141,19 @@ public class ShiroRequiresPermissionsFeature implements DynamicFeature {
     Method method = resourceInfo.getResourceMethod();
 
     if(resourceClass.isAnnotationPresent(RequiresPermissions.class)) {
-      requiredPermissions.addAll(asList(resourceClass.getAnnotation(RequiresPermissions.class).value()));
+      requiredPermissions.addAll(Arrays.asList(resourceClass.getAnnotation(RequiresPermissions.class).value()));
     }
     if(method.isAnnotationPresent(RequiresPermissions.class)) {
-      requiredPermissions.addAll(asList(method.getAnnotation(RequiresPermissions.class).value()));
+      requiredPermissions.addAll(Arrays.asList(method.getAnnotation(RequiresPermissions.class).value()));
     }
 
     // in case of Spring bean proxied by CGLIB (where we cannot access annotations anymore)
     Class<?> superClass = resourceClass.getSuperclass();
     if(superClass.isAnnotationPresent(RequiresPermissions.class)) {
-      requiredPermissions.addAll(asList(superClass.getAnnotation(RequiresPermissions.class).value()));
+      requiredPermissions.addAll(Arrays.asList(superClass.getAnnotation(RequiresPermissions.class).value()));
     }
     if(isSuperMethodAnnotated(superClass, method, RequiresPermissions.class)) {
-      requiredPermissions .addAll(asList(getSuperMethodAnnotation(superClass, method, RequiresPermissions.class).value()));
+      requiredPermissions .addAll(Arrays.asList(getSuperMethodAnnotation(superClass, method, RequiresPermissions.class).value()));
     }
 
     if(!requiredPermissions.isEmpty()) {
