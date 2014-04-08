@@ -8,8 +8,7 @@ tags: [java, rest, shiro, jersey, spring]
 {% include JB/setup %}
 
 
-Dans ce billet je vais présenter comment supporter dans [Jersey 2.7](https://jersey.java.net) les annotations
-`RequiresAuthentication`, `RequiresRoles`, `RequiresPermissions`, etc. de [Shiro 1.2](http://shiro.apache.org).
+Dans ce billet je vais présenter comment supporter dans [Jersey 2.7](https://jersey.java.net) les annotations `RequiresAuthentication`, `RequiresRoles`, `RequiresPermissions`, etc. de [Shiro 1.2](http://shiro.apache.org).
 
 <!-- more -->
 
@@ -98,11 +97,9 @@ public class JerseyConfiguration extends ResourceConfig {
 }
 ```
 
-La [configuration des annotations Shiro et Spring](https://shiro.apache.org/spring.html#Spring-EnablingShiroAnnotations)
-ne suffit pas pour Jersey car ce dernier charge ses ressources en dehors de Spring.
+La [configuration des annotations Shiro et Spring](https://shiro.apache.org/spring.html#Spring-EnablingShiroAnnotations) ne suffit pas pour Jersey car ce dernier charge ses ressources en dehors de Spring.
 
-Il faut donc utiliser [DynamicFeature](https://jax-rs-spec.java.net/nonav/2.0/apidocs/javax/ws/rs/container/DynamicFeature.html) 
-qui sera executer au deploiement pour chaque methode des ressources.
+Il faut donc utiliser [DynamicFeature](https://jax-rs-spec.java.net/nonav/2.0/apidocs/javax/ws/rs/container/DynamicFeature.html) qui sera executer au deploiement pour chaque methode des ressources.
 
 Il faut aussi supporter le cas des sous-ressources gérées par Spring. A cause du proxy CGLIB, on perd l’accès aux annotations : il faut donc retrouver la classe originale sous le proxy via `getSuperclass()`.
 
