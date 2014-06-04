@@ -9,6 +9,7 @@ tags: [ubuntu]
 
 Petit aide mémoire pour configurer ma machine de dev sous [Xubuntu 14.04](http://xubuntu.org/).
 
+<!-- more -->
 
 ## apt-get
 
