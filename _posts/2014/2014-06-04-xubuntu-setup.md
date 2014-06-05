@@ -53,11 +53,15 @@ update-pepperflashplugin-nonfree --install
 # Remove unused programs
 apt-get -y remove abiword gnumeric mousepad thunderbird
 
+# Confire zsh as default shell
+chsh -s $(which zsh) $(whoami)
+
 apt-get clean
 apt-get upgrade
 
 exit
 
+# install oh-my-zsh
 curl -L http://install.ohmyz.sh | sh
 ```
 
