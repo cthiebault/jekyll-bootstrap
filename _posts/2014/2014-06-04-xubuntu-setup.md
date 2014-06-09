@@ -30,7 +30,7 @@ sh -c 'echo "deb http://archive.canonical.com/ trusty partner" >> /etc/apt/sourc
 
 apt-get update
 
-apt-get install -y mongodb-org oracle-java7-installer oracle-java8-installer nodejs openssh-server vim git zip bzip2 fontconfig curl make python-software-properties apache2 mysql-server php5 libapache2-mod-php5 libapache2-mod-auth-mysql php5-mysql php5-gd php5-curl php5-dev php-pear git subversion chromium-browser libreoffice meld virtualbox vim sublime-text-installer mysql-workbench filezilla synaptic ubuntu-restricted-extras nautilus-dropbox libcurl4-openssl-dev libxml2-dev r-base keepassx cups-pdf gparted zsh devscripts
+apt-get install -y mongodb-org oracle-java7-installer oracle-java8-installer nodejs openssh-server vim git zip bzip2 fontconfig curl make python-software-properties apache2 mysql-server php5 libapache2-mod-php5 libapache2-mod-auth-mysql php5-mysql php5-gd php5-curl php5-dev php-pear git subversion chromium-browser libreoffice meld virtualbox vim sublime-text-installer mysql-workbench filezilla synaptic ubuntu-restricted-extras nautilus-dropbox libcurl4-openssl-dev libxml2-dev r-base keepassx cups-pdf gparted devscripts zsh 
 
 # Apache2 config
 a2enmod php5
@@ -61,8 +61,15 @@ apt-get upgrade
 
 exit
 
-# Install oh-my-zsh
-curl -L http://install.ohmyz.sh | sh
+# Configure prezto
+zsh
+git clone --recursive git@github.com:cthiebault/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
+chsh -s /bin/zsh
+
 ```
 
 ## Download manually
