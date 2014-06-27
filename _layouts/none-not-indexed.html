@@ -3,4 +3,21 @@ theme :
   name : bootstrap
 ---
 {% include JB/setup %}
-{% include themes/bootstrap/none-not-indexed.html %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+  <title>{{ page.title }}</title>
+</head>
+<body>
+
+{{ content }}
+
+{% include JB/analytics %}
+
+</body>
+</html>
+
+
