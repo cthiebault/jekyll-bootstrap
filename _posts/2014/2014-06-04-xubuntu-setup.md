@@ -113,6 +113,16 @@ git config --global user.name "Cedric Thiebault"
 git config --global user.email cedric.thiebault@gmail.com
 ```
 
+http://blog.aplikacja.info/2010/11/git-pull-rebase-by-default
+
+```
+git config --global branch.master.rebase true
+git config branch.branch_10.rebase true
+git config branch.autosetuprebase always
+
+```
+
+
 ### PHP
 
 **/etc/php5/apache2/php.ini**
