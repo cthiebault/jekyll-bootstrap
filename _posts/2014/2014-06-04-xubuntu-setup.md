@@ -122,6 +122,32 @@ git config branch.autosetuprebase always
 
 ```
 
+### Terminal
+
+Remove from cthiebault@... from terminal title.
+
+Replace in `~/.bashrc`
+
+```
+case "$TERM" in
+xterm*|rxvt*)
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
+*)
+    ;;
+esac
+```
+by
+```
+case "$TERM" in
+xterm*|rxvt*)
+    PS1="\[\e]0;\w\a\]$PS1"
+    ;;
+*)
+    ;;
+esac
+
+```
 
 ### PHP
 
