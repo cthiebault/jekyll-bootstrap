@@ -64,6 +64,14 @@ exit
 # Configure prezto
 zsh
 git clone --recursive git@github.com:cthiebault/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+
+# sync fork
+cd ${ZDOTDIR:-$HOME}/.zprezto
+git remote add upstream https://github.com/sorin-ionescu/prezto.git
+git fetch upstream
+git checkout master
+git merge upstream/master
+
 setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
