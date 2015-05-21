@@ -5758,3 +5758,6 @@ a.rss-link {
 .resume .first {
   margin-top: 10.5px;
 }
+.resume .techno {
+  font-style: italic;
+}
