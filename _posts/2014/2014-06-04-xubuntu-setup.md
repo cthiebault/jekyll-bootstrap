@@ -39,9 +39,20 @@ a2enmod rewrite
 # Java
 update-java-alternatives -s java-8-oracle
 
+#Composer
+php -r "readfile('https://getcomposer.org/installer');" > composer-setup.php
+php -r "if (hash('SHA384', file_get_contents('composer-setup.php')) === 'fd26ce67e3b237fffd5e5544b45b0d92c41a4afe3e3f778e942e43ce6be197b9cdc7c251dcde6e2a52297ea269370680') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); }"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+mv composer.phar /usr/local/bin/composer
+
+```
+### Add in your ~/.bashrc
+```
+PATH="$HOME/.composer/vendor/bin:$PATH" into
+
 # Drush
-pear channel-discover pear.drush.org
-pear install drush/drush
+composer global require drush/drush
 
 # nodeJS modules
 npm install -g grunt-cli less connect uglify-js jshint bower
